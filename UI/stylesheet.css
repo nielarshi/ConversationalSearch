@@ -1,38 +1,95 @@
 body {
-    font: 15px arial, sans-serif;
-    background-color: #d9d9d9;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+}
+
+.chat-p {
+    margin:0;
+    padding:0;
+}
+
+.user {
+    padding: 10px;
+    padding-left : 20px;
+    padding-right : 20px;
+    border-radius : 20px;
+    background: #3cbec7;
+    min-width: 100px;
+    color : white;
+    float:left;
+    clear:both;
+    margin-bottom: 10px;
+    max-width: 250px;
+}
+
+.bot {
+    padding: 10px;
+    border-radius : 20px;
+    padding-left : 20px;
+    padding-right : 20px;
+    min-width: 100px;
+    background: #a579ca;
+    float:right;
+    clear:both;
+    max-width: 250px;
+    margin-bottom: 10px;
+    text-align: right;
+    color:white;
+}
+
+#box-header {
+    padding:20px;
+    background: #1f5fa5;
+    color : white;
 }
 
 #bodybox {
-    margin: auto;
-    max-width: 550px;
-    font: 15px arial, sans-serif;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 550px;
+    width: 350px;
     background-color: white;
     border-style: solid;
-    border-width: 1px;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    padding-right: 25px;
-    padding-left: 25px;
-    box-shadow: 5px 5px 5px grey;
-    border-radius: 15px;
+    border-width: 0px;
+    box-shadow: 0px 2px 8px #846d6d;
+    border-radius: 4px;
+}
+
+#img-div {
+        margin-left: 200px;
+    margin-top: 100px;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: #2da5c9;
+    width: 100%;
+}
+
+#messagebox {
+    padding-top : 20px;
+    height : 435px;
+    padding: 5px;
+    overflow: scroll;
+    
+}
+
+#form {
+    display: flex;
+}
+
+#form button {
+    background: #2da5c9;
+    color: white;
+    border: none;
 }
 
 #chatborder {
-    border-style: solid;
-    background-color: #f6f9f6;
-    border-width: 3px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-right: 20px;
-    padding-left: 15px;
-    border-radius: 15px;
+   
 }
 
 .chatlog {
@@ -40,9 +97,9 @@ body {
 }
 
 #chatbox {
-    font: 17px arial, sans-serif;
-    height: 22px;
-    width: 100%;
+    height: 50px;
+    width: 350px;
+    padding: 20px;
 }
 
 h1 {

@@ -2,9 +2,12 @@ package com.lexisnexis.hackathon;
 
 
 import com.lexisnexis.hackathon.model.search.Response;
+import com.lexisnexis.hackathon.template.TemplateParser;
+import com.lexisnexis.hackathon.template.model.Template;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 @Path("/search")
 public class Search {
@@ -20,9 +23,12 @@ public class Search {
     @Produces(MediaType.APPLICATION_JSON)
     public Response search() {
         Response response = new Response();
-        response.setPretext("This.");
+
+        TemplateParser templateParser = new TemplateParser();
+        List<Template> templateList = templateParser.getTemplates();
+        response.setPretext(templateList.get(0).getPreText());
         response.setMainText("Main.");
-        response.setPostText("That.");
+        response.setPostText(templateList.get(0).getPostText());
         return  response;
     }
 

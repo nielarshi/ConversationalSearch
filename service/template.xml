@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<templates>
+    <template>
+        <name>who</name>
+        <pre-text>I have found below answer</pre-text>
+        <post-text>Hope this would have helped you. Do you have something else in mind?</post-text>
+    </template>
+</templates>
