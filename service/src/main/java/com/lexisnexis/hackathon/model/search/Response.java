@@ -1,5 +1,8 @@
 package com.lexisnexis.hackathon.model.search;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Response {
     private String pretext;
     private String mainText;

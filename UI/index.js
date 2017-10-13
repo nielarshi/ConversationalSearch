@@ -1,6 +1,4 @@
-//links
-//http://eloquentjavascript.net/09_regexp.html
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
 nlp = window.nlp_compromise;
 
 var messages = [], //array that hold the record of each string in chat

@@ -1,7 +1,7 @@
 package com.lexisnexis.hackathon.nlp;
 
-import edu.stanford.nlp.dcoref.CorefChain;
-import edu.stanford.nlp.dcoref.CorefCoreAnnotations;
+import edu.stanford.nlp.coref.CorefCoreAnnotations;
+import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -29,6 +29,8 @@ public class NLPHelper {
     public void extract(String text) {
         Annotation document = new Annotation(text);
 
+        this.pipeline.annotate(document);
+
         // these are all the sentences in this document
         // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
         List<CoreMap> sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
@@ -43,6 +45,11 @@ public class NLPHelper {
                 String pos = token.get(CoreAnnotations.PartOfSpeechAnnotation.class);
                 // this is the NER label of the token
                 String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
+
+                if (pos.startsWith("N")) {
+                    System.out.println("word: " + word + " pos: " + pos + " ne:" + ne);
+                }
+
             }
 
             // this is the parse tree of the current sentence
@@ -64,7 +71,7 @@ public class NLPHelper {
 
     public static void main(String[] args) {
         NLPHelper nlpHelper = new NLPHelper();
-        nlpHelper.extract("Who are the judges?");
+        nlpHelper.extract("Who was the judge for ABCD case?");
     }
 
 

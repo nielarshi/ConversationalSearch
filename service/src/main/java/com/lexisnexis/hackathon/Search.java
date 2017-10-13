@@ -1,8 +1,10 @@
 package com.lexisnexis.hackathon;
 
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import com.lexisnexis.hackathon.model.search.Response;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 
 @Path("/search")
 public class Search {
@@ -11,6 +13,17 @@ public class Search {
     public String getMsg()
     {
         return "Hello from search";
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response search() {
+        Response response = new Response();
+        response.setPretext("This.");
+        response.setMainText("Main.");
+        response.setPostText("That.");
+        return  response;
     }
 
 }
