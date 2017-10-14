@@ -41,6 +41,7 @@ body {
     padding:20px;
     background: #1f5fa5;
     color : white;
+    cursor: pointer;
 }
 
 #bodybox {
@@ -78,6 +79,26 @@ body {
     
 }
 
+.helpful-msg {
+    clear: both;
+    font-size: 11px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 10px;
+}
+
+.helpful-yes, .helpful-no {
+    width : 30px;
+    height : 30px;
+}
+
+.helpful-yes img, .helpful-no img {
+    width : 20px;
+    height : 20px;
+    margin-top:3px;
+}
+
+
 #form {
     display: flex;
 }
@@ -86,6 +107,7 @@ body {
     background: #2da5c9;
     color: white;
     border: none;
+    width: 100px;
 }
 
 #chatborder {
@@ -97,8 +119,7 @@ body {
 }
 
 #chatbox {
-    height: 50px;
-    width: 350px;
+    width: 300px;
     padding: 20px;
 }
 

@@ -1,0 +1,215 @@
+/*
+	*
+	*	description: wam specific css styles
+	*	date:	3-05-2014
+	*	author:	goddarmx
+	*
+*/
+/*	PAGE LAYOUT STYLES	*/
+	#helpSection #helpLinks {
+		background: #fff;
+		border: 1px solid #bcbec0;
+		border-radius: 3px;
+		box-shadow: 0 0 5px 1px rgba(0,0,0,0.28);
+		display: none;
+		position: absolute;
+		right: 0;
+		text-align: left;
+		top: 40px;
+		width: 75%;
+		z-index: 1;
+	}
+	#idpLoginLinks, #idpProfileLinks {
+		background: #fff;
+		border: 1px solid #bcbec0;
+		border-radius: 3px;
+		box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.28);
+		display: none;
+		text-align: left;
+		top: -240px;
+		width: 425px;
+		z-index: 1;
+	}
+	#helpSection #helpLinks li,
+	#helpSection #helpLinks li a,
+	#idpLoginLinks li,
+	#idpLoginLinks li a,
+	#idpProfileLinks li,
+	#idpProfileLinks a {
+		display: block;
+		line-height: 24px;
+	}
+	#helpSection #helpLinks li:first-child,
+	#idpLoginLinks li:first-child,
+	#idpProfileLinks li:first-child {
+		background: rgb(244, 244, 245);
+		background: -ms-linear-gradient(90deg, rgb(244, 244, 245) 30%, rgb(233, 233, 234) 75%);
+		background: linear-gradient(180deg, rgb(244, 244, 245) 30%, rgb(233, 233, 234) 75%);
+		border-bottom: 1px solid #fff;
+		font-size: 12px;
+		font-size: 1.2rem;
+		height: 40px;
+		line-height: 40px;
+		padding: 14 16px;
+	}
+	#idpLoginLinks li:first-child,
+	#idpProfileLinks li:first-child {
+		margin-bottom: 0;
+	}
+	#helpLinks > li:nth-child(2),
+	#idpLoginLinks > li:nth-child(2),
+	#idpProfileLinks > li:nth-child(2) {
+		border-top:1px solid #bcbec0;
+		padding-top:6px;
+	}
+	#helpLinks > li:last-child,
+	#idpLoginLinks > li:last-child,
+	#idpProfileLinks > li:last-child {
+		margin-bottom: 6px;
+	}
+	#helpSection #helpLinks li a,
+	#idpLoginLinks li a,
+	#idpProfileLinks li a {
+		padding: 0 10px;
+		padding: 0 1rem;
+	}
+	#helpSection #helpLinks li a:visited,
+	#idpLoginLinks li a:visited,
+	#idpProfileLinks li a:visited {
+		color: #07c;
+		text-decoration: none;
+	}
+	section#loginArea input[type="text"],
+	section#loginArea input[type="password"] {
+		width: 90%;
+	}
+	section#loginArea li {
+		/*overflow: hidden;
+		position: relative;*/
+		
+	}
+	section#loginArea form li {
+			margin-bottom: 16px;
+			margin-bottom: 1.6rem;
+		}
+		label#rememberMe {
+			height: 47px;
+			line-height: 47px;
+			margin: 0 0 0 20px;
+		}
+		
+.support-links li {
+	margin:24px 0;
+}
+
+.support-links li:first-child {
+	margin-top: 0;
+}
+
+/*MODAL DIALOG*/
+.modal-title {
+	float: left;
+	padding: 0 0 0 10px;
+	padding: 0 0 0 1rem;
+}
+.close-btn {
+	border: 1px solid rgba(255,255,255,0);
+	float: right;
+	height: 16px;
+	line-height: normal;
+	margin: 13px 10px 13px 0;
+	text-align: center;
+	width: 16px;
+}
+.close-btn:hover, .close-btn:focus {
+	background-color: #f4f4f5;
+	border: 1px solid #bcbec0;
+}
+.close-btn:active{
+	background-color: #373739;
+	color: #f4f4f5;
+}
+
+	/* forgot credentials area */
+	#ForgotUserId-radio-display,
+	#ForgotPwd-radio-display {
+		margin-left: 23px;
+	}
+	/* end forgot credentials area */
+
+	/*
+		*	end login area
+		*	marketing area
+	*/
+	aside#marketingArea {
+		float: right;
+		background: #fff;
+		max-width: 538px;
+		width: 60%;
+	}
+	aside#marketingArea iframe {
+		min-height: 494px;
+		width: 100%;
+	}
+	/*
+		*	end marketing area
+		*	end content area
+	*/
+	/**/
+
+/*	END PAGE LAYOUT STYLES	*/
+/*
+		*	button styles
+*/
+	/*
+		* Important note:  GDSI has this drop down showing as a link instead of a button within the GDSI designs.  It has been verfied that this should look like a link.
+	*/
+button.drop-down-btn {
+	color: #07c;
+	font-size: 14px;
+	font-size: 1.4rem;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+}
+button.drop-down-btn:hover,
+button.drop-down-btn:focus {
+	text-decoration: underline;
+}
+button.drop-down-btn a:hover,
+button.drop-down-btn a:focus {
+	outline: 0;
+}
+section#loginArea li.link-messages {
+	clear: both;
+	color: #07c;
+	overflow: hidden;
+	padding: 20px 0 0;
+}
+.float-left {
+	float: left;
+}
+
+.wam-keyword {
+	color: #ed1c24;
+}
+.wam-additional-guidelines {
+	margin-top: 20px;
+}
+
+form p a:link {
+	text-decoration: none;
+}
+
+.mode-heading {
+	margin: 3.2rem 0 .8rem;
+}
+
+.delivery-mode {
+	margin-left: 20px;
+	margin-left: 2rem;
+}
+
+#passcode {
+	width: 80%;
+}

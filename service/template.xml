@@ -1,8 +1,53 @@
 <?xml version="1.0"?>
 <templates>
     <template>
+        <name>default</name>
+        <pre-text>I have found below answer</pre-text>
+        <post-text><br/>Hope this would have helped you. Do you have something else in mind?</post-text>
+    </template>
+    <template>
+        <name>some-data</name>
+        <pre-text>Sorry! I could not find the exact details, could you please elaborate.<br/>Below are the some of the record I could find.</pre-text>
+        <post-text><br/>Did it help you with your search?</post-text>
+    </template>
+    <template>
         <name>who</name>
         <pre-text>I have found below answer</pre-text>
         <post-text>Hope this would have helped you. Do you have something else in mind?</post-text>
+    </template>
+    <template>
+        <name>what</name>
+        <pre-text>Here's what I found </pre-text>
+        <post-text>Would you like to know anything else</post-text>
+    </template>
+    <template>
+        <name>when</name>
+        <pre-text>it happened on</pre-text>
+        <post-text>Do you want to know anything else?</post-text>
+    </template>
+    <template>
+        <name>which</name>
+        <pre-text>This is the information you neede</pre-text>
+        <post-text>What else would you want to know?</post-text>
+    </template>
+    <template>
+        <name>random</name>
+        <pre-text>Sorry I could not get you</pre-text>
+        <post-text>Can you be more specific?</post-text>
+    </template>
+    <template>
+        <name>where</name>
+        <pre-text>Here is the place where</pre-text>
+        <post-text>Do you need any other information?</post-text>
+    </template>
+    <template>
+        <name>greeting</name>
+        <pre-text>Hello, I am good.</pre-text>
+        <post-text>How may I help you today?</post-text>
+    </template>
+    <template>
+        <name>goodbye</name>
+        <pre-text>It was nice talking to you.</pre-text>
+        <post-text>Hope I was helpful. Until next time...may the force be with you.</post-text>
     </template>
 </templates>

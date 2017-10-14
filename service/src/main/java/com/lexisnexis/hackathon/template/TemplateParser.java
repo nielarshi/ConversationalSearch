@@ -14,8 +14,25 @@ import java.util.List;
 
 public class TemplateParser {
 
+    private static TemplateParser templateParser;
+
+    private List<Template> templates;
+    private List<String> names;
+
+    private TemplateParser() {
+        this.templates = getTemplates();
+    }
+
+    public static TemplateParser getInstance() {
+        if (templateParser == null) {
+            templateParser = new TemplateParser();
+        }
+        return templateParser;
+    }
+
     public List<Template> getTemplates() {
         List<Template> templateList = new ArrayList<Template>();
+        names = new ArrayList<>();
         try {
 
             File fXmlFile = new File("template.xml");
@@ -52,6 +69,7 @@ public class TemplateParser {
                     System.out.println("Pre Text : " + template.getPreText());
                     System.out.println("Post Text : " + template.getPostText());
 
+                    names.add(template.getName());
                 }
             }
         } catch (Exception e) {
@@ -61,6 +79,23 @@ public class TemplateParser {
         return templateList;
     }
 
+    public Template getTemplateFor(String name) {
+        for (Template template : this.templates) {
+            if (template.getName().equalsIgnoreCase(name)) {
+                return template;
+            }
+        }
+        return getTemplateFor("default");
+    }
+
+    public Template getTemplateBasedOnOccurance(String words) {
+        for (String name : names) {
+            if (words.toLowerCase().contains(name.toLowerCase())) {
+                return getTemplateFor(name);
+            }
+        }
+        return getTemplateFor("default");
+    }
 
     public static void main(String[] args) {
         TemplateParser templateParser = new TemplateParser();

@@ -12,6 +12,7 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.util.CoreMap;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -26,7 +27,14 @@ public class NLPHelper {
         this.pipeline = new StanfordCoreNLP(props);
     }
 
-    public void extract(String text) {
+    public List<List<String>> extract(String text) {
+
+        List<List<String>> tokenLists = new ArrayList<>();
+        List<String> tokenList = new ArrayList<String>();
+        List<String> personList = new ArrayList<String>();
+        List<String> numberList = new ArrayList<String>();
+        List<String> otherList = new ArrayList<String>();
+
         Annotation document = new Annotation(text);
 
         this.pipeline.annotate(document);
@@ -47,8 +55,19 @@ public class NLPHelper {
                 String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
 
                 if (pos.startsWith("N")) {
-                    System.out.println("word: " + word + " pos: " + pos + " ne:" + ne);
+                    if (ne.equalsIgnoreCase("PERSON")) {
+                        personList.add(word);
+                    } else {
+                        tokenList.add(word);
+                    }
+                } else {
+                    if (ne.equalsIgnoreCase("NUMBER")) {
+                        numberList.add(word);
+                    } else {
+                        otherList.add(word);
+                    }
                 }
+                System.out.println("word: " + word + " pos: " + pos + " ne:" + ne);
 
             }
 
@@ -67,6 +86,12 @@ public class NLPHelper {
                 document.get(CorefCoreAnnotations.CorefChainAnnotation.class);
 
         System.out.println(graph);
+
+        tokenLists.add(personList);
+        tokenLists.add(tokenList);
+        tokenLists.add(numberList);
+        tokenLists.add(otherList);
+        return tokenLists;
     }
 
     public static void main(String[] args) {
